@@ -1,47 +1,3 @@
-"""
-========================================================================================
-FLIPKART FASHION DARK-PATTERN RESEARCH SCRAPER
-========================================================================================
-Module: flipkart_fashion_dark_pattern_scraper.py
-Purpose: Dynamic web scraper and evidence collector designed to detect and audit
-         dark patterns (deceptive choice architecture, artificial scarcity, inflated
-         discounts, misleading badges, and hidden conditions) in Flipkart fashion listings.
-
-ETHICAL, COMPLIANCE & LEGAL NOTICE:
-----------------------------------------------------------------------------------------
-1. ACADEMIC & AUDITING PURPOSE:
-   This tool is developed strictly for empirical research, algorithmic auditing,
-   consumer advocacy, and digital rights studies (e.g., aligning with the Central Consumer
-   Protection Authority (CCPA) 'Guidelines for Prevention and Regulation of Dark Patterns,
-   2023' and FTC digital choice architecture guidelines).
-
-2. COMPLIANCE WITH TERMS & ROBOTS.TXT:
-   Automated data collection must comply with the target platform's Terms of Use and
-   applicable legal statutes. Users must avoid scraping restricted portals, bypassing
-   authentication/CAPTCHA mechanisms, or violating access controls.
-
-3. RESPONSIBLE RATE LIMITING & SERVER CARE:
-   A mandatory polite delay (randomized between 2.5 and 5.0 seconds) is enforced between
-   consecutive HTTP requests. Do NOT lower delays to abusive rates or launch concurrent
-   DDoS-like request bursts.
-
-4. PRIVACY SAFEGUARD (ZERO PII):
-   This scraper extracts only public catalog data (product titles, prices, promotional
-   badges). It does NOT collect, scrape, or store any Personal Identifiable Information
-   (PII), buyer identities, delivery addresses, reviews, or payment details.
-
-5. NON-MALICIOUS USE ONLY:
-   Do NOT use this tool for commercial data resale, price undercutting bots, inventory
-   hoarding, spam, or hostile competitive intelligence.
-
-DEPENDENCIES:
-----------------------------------------------------------------------------------------
-Python 3.9+ required.
-Install required packages via pip:
-    pip install requests beautifulsoup4 pandas
-========================================================================================
-"""
-
 import os
 import sys
 import time
@@ -75,15 +31,7 @@ logging.basicConfig(
 logger = logging.getLogger("FlipkartDarkPatternScraper")
 
 
-# ==============================================================================
-# USER INPUT: PRODUCT URLS TO SCRAPE
-# ==============================================================================
-# Paste your target Flipkart fashion listing URLs below.
-# Both category listing URLs (with /pr?sid=) and search queries (/search?q=) are supported.
-# Examples:
-#   - Men's T-Shirts: "https://www.flipkart.com/clothing-and-accessories/topwear/tshirts/mens-tshirts/pr?sid=clo,ash,ank,edy"
-#   - Women's Dresses: "https://www.flipkart.com/clothing-and-accessories/dresses-and-gown/dress/womens-dress/pr?sid=clo,odx,maj,jhy"
-#   - Men's Footwear: "https://www.flipkart.com/footwear/mens-footwear/sports-shoes/pr?sid=osp,cil,1cu"
+
 PRODUCT_URLS = [
     "https://www.flipkart.com/clothing-and-accessories/topwear/tshirts/mens-tshirts/pr?sid=clo,ash,ank,edy",
     "https://www.flipkart.com/clothing-and-accessories/dresses-and-gown/dress/womens-dress/pr?sid=clo,odx,maj,jhy",
